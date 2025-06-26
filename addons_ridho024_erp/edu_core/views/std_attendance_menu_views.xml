@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="menu_std_attendance"
+        name="Student Attendances"
+        action="std_attendance_action"
+        sequence="10"/>
+
+</odoo>
