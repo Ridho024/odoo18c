@@ -14,11 +14,10 @@
     'category': 'Education',
     'version': '0.1',
 
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail', 'project'],
 
     'data': [
         'security/ir.model.access.csv',
-        'wizard/mail_activity_schedule_views.xml',
         'views/res_partner_inherit_views.xml',
         'views/std_attendance_views.xml',
         'views/std_attendance_menu_views.xml',
