@@ -11,7 +11,9 @@ Long description of module's purpose
     'depends': ['base', 'account', 'stock'],
     'data': [
         # 'security/ir.model.access.csv',
+        # 'security/stock_valuation_group.xml',
         'views/res_config_settings_views.xml',
+        'views/product_category_views.xml',
         'views/templates.xml',
     ],
     'demo': [

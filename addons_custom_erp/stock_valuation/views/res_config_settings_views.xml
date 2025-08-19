@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="res_config_settings_account_view_form_inherit" model="ir.ui.view">
-        <field name="name">res.config.settings.view.form.inherit.stock.ce.plus</field>
+        <field name="name">res.config.settings.view.form.inherit.stock.valuation</field>
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="account.res_config_settings_view_form"/>
         <field name="arch" type="xml">
