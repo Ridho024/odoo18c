@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_account_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.stock.ce.plus</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <!-- Tambahkan setelah Default Accounts -->
+            <xpath expr="//block[@id='default_accounts']" position="after">
+                <t groups="account.group_account_user">
+                    <block title="Stock Valuation" id="inventory_valuation">
+                        <setting string="General Account Properties">
+                            <div class="content-group">
+                                <div class="row mt8">
+                                    <label for="income_account_id" class="col-lg-5 o_light_label"/>
+                                    <field name="income_account_id"/>
+                                </div>
+                                <div class="row mt8">
+                                    <label for="expense_account_id" class="col-lg-5 o_light_label"/>
+                                    <field name="expense_account_id"/>
+                                </div>
+                            </div>
+                        </setting>
+
+                        <setting string="WIP Account Properties">
+                            <div class="content-group">
+                                <div class="row mt8">
+                                    <label for="wip_account_id" class="col-lg-5 o_light_label"/>
+                                    <field name="wip_account_id"/>
+                                </div>
+                                <div class="row mt8">
+                                    <label for="wip_overhead_account_id" class="col-lg-5 o_light_label"/>
+                                    <field name="wip_overhead_account_id"/>
+                                </div>
+                            </div>
+                        </setting>
+
+                        <setting help="Enable automatic accounting entries for stock movements">
+                            <field name="automatic_accounting" />
+                            <div invisible="not automatic_accounting" class="content-group">
+                                <div class="content-group">
+                                    <div class="row mt8">
+                                        <label for="stock_valuation_account_id" class="col-lg-5 o_light_label"/>
+                                        <field name="stock_valuation_account_id" />
+                                    </div>
+                                    <div class="row mt8">
+                                        <label for="stock_input_account_id" class="col-lg-5 o_light_label"/>
+                                        <field name="stock_input_account_id" />
+                                    </div>
+                                    <div class="row mt8">
+                                        <label for="stock_output_account_id" class="col-lg-5 o_light_label"/>
+                                        <field name="stock_output_account_id" />
+                                    </div>
+                                    <div class="row mt8">
+                                        <label for="production_account_id" class="col-lg-5 o_light_label"/>
+                                        <field name="production_account_id" />
+                                    </div>
+                                    <div class="row mt8">
+                                        <label for="stock_journal_id" class="col-lg-5 o_light_label"/>
+                                        <field name="stock_journal_id" />
+                                    </div>
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+                </t>
+            </xpath>
+        </field>
+    </record>
+</odoo>
