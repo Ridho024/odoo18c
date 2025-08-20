@@ -7,7 +7,7 @@ class ResConfigSettings(models.TransientModel):
     
     # General
     income_account_id = fields.Many2one('account.account', string='Income Account', config_parameter='stock_valuation.income_account_id')
-    expense_account_id = fields.Many2one('account.account', string='Expense Account', config_parameter='stock_valuation.expene_account_id')
+    expense_account_id = fields.Many2one('account.account', string='Expense Account', config_parameter='stock_valuation.expense_account_id')
     
     # WIP
     wip_account_id = fields.Many2one('account.account', string='WIP Account', config_parameter='stock_valuation.wip_account_id')
@@ -19,4 +19,3 @@ class ResConfigSettings(models.TransientModel):
     stock_output_account_id = fields.Many2one('account.account', string='Stock Output Account', config_parameter='stock_valuation.stock_output_account_id')
     production_account_id = fields.Many2one('account.account', string='Production Account', config_parameter='stock_valuation.production_account_id')
     stock_journal_id = fields.Many2one('account.journal', string='Stock Journal', config_parameter='stock_valuation.stock_journal_id')
-     
