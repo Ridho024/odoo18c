@@ -7,7 +7,18 @@
         <field name="inherit_id" ref="stock_account.view_category_property_form_stock"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='property_cost_method']" position="after">
-                <field name="property_valuation" />
+                <field name="property_valuation" invisible="not automatic_accounting" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="category_property_valuation_view_form_inherit" model="ir.ui.view">
+        <field name="name">category.property.view.form.inherit.stock.valuation</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="account.view_category_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='account_property']" position="attributes">
+                <attribute name="invisible">not automatic_accounting</attribute>
             </xpath>
         </field>
     </record>

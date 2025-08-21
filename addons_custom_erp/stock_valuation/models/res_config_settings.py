@@ -6,16 +6,16 @@ class ResConfigSettings(models.TransientModel):
     automatic_accounting = fields.Boolean(string='Automatic Accounting', config_parameter='stock_valuation.automatic_accounting')
     
     # General
-    income_account_id = fields.Many2one('account.account', string='Income Account', config_parameter='stock_valuation.income_account_id')
-    expense_account_id = fields.Many2one('account.account', string='Expense Account', config_parameter='stock_valuation.expense_account_id')
+    income_account_id = fields.Many2one('account.account', string='Income Account', config_parameter='stock_valuation.income_account_id', domain=['&', ('deprecated', '=', False), ('account_type', 'not in', ('asset_receivable', 'liability_payable', 'asset_cash', 'liability_credit_card', 'off_balance'))])
+    expense_account_id = fields.Many2one('account.account', string='Expense Account', config_parameter='stock_valuation.expense_account_id', domain=['&', ('deprecated', '=', False), ('account_type', 'not in', ('asset_receivable', 'liability_payable', 'asset_cash', 'liability_credit_card', 'off_balance'))])
     
     # WIP
     wip_account_id = fields.Many2one('account.account', string='WIP Account', config_parameter='stock_valuation.wip_account_id')
     wip_overhead_account_id = fields.Many2one('account.account', string='WIP Overhead Account', config_parameter='stock_valuation.wip_overhead_account_id')
-    
+     
     # Automatic Accounting
-    stock_valuation_account_id = fields.Many2one('account.account', string='Stock Valuation Account', config_parameter='stock_valuation.stock_valuation_account_id')
-    stock_input_account_id = fields.Many2one('account.account', string='Stock Input Account', config_parameter='stock_valuation.stock_input_account_id')
+    stock_valuation_account_id = fields.Many2one('account.account', string='Stock Valuation Account', config_parameter='stock_valuation.stock_valuation_account_id', domain=[('deprecated', '=', False)])
+    stock_input_account_id = fields.Many2one('account.account', string='Stock Input Account', config_parameter='stock_valuation.stock_input_account_id', domain=[('deprecated', '=', False)])
     stock_output_account_id = fields.Many2one('account.account', string='Stock Output Account', config_parameter='stock_valuation.stock_output_account_id')
-    production_account_id = fields.Many2one('account.account', string='Production Account', config_parameter='stock_valuation.production_account_id')
+    production_account_id = fields.Many2one('account.account', string='Production Account', config_parameter='stock_valuation.production_account_id', domain=[('deprecated', '=', False)])
     stock_journal_id = fields.Many2one('account.journal', string='Stock Journal', config_parameter='stock_valuation.stock_journal_id')
