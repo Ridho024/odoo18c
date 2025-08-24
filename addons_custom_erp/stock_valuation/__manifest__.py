@@ -2,7 +2,7 @@
     'name': "Stock Valuation for Odoo Community",
     'summary': "Stock Valuation for Odoo Community Edition Plus",
     'description': """
-Long description of module's purpose
+        Long description of module's purpose
     """,
     'author': "Ridho024",
     'website': "https://www.yourcompany.com",
@@ -11,6 +11,7 @@ Long description of module's purpose
     'depends': ['base', 'account', 'stock'],
     'data': [
         'data/stock_valuation_account.xml',
+        'data/config_parameter.xml',
         'views/res_config_settings_views.xml',
         'views/product_category_views.xml',
     ],

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+        <record id="param_stock_valuation_income_account" model="ir.config_parameter">
+            <field name="key">stock_valuation.income_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_stock_valuation_income_account')"/>
+        </record>
+    
+        <record id="param_stock_valuation_expense_account" model="ir.config_parameter">
+            <field name="key">stock_valuation.expense_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_stock_valuation_expense_account')"/>
+        </record>
+    
+        <record id="param_wip_account" model="ir.config_parameter">
+            <field name="key">stock_valuation.wip_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_wip_account')"/>
+        </record>
+    
+        <record id="param_wip_overhead_account" model="ir.config_parameter">
+            <field name="key">stock_valuation.wip_overhead_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_wip_overhead_account')"/>
+        </record>
+    
+        <record id="param_stock_valuation_account_id" model="ir.config_parameter">
+            <field name="key">stock_valuation.stock_valuation_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_stock_valuation_account')"/>
+        </record>
+    
+        <record id="param_stock_input_account" model="ir.config_parameter">
+            <field name="key">stock_valuation.stock_input_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_stock_input_account')"/>
+        </record>
+    
+        <record id="param_stock_output_account_id" model="ir.config_parameter">
+            <field name="key">stock_valuation.stock_output_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_stock_output_account')"/>
+        </record>
+    
+        <record id="param_stock_production_account" model="ir.config_parameter">
+            <field name="key">stock_valuation.production_account_id</field>
+            <field name="value" eval="ref('stock_valuation.default_stock_production_account')"/>
+        </record>
+    
+    </data>
+</odoo>
