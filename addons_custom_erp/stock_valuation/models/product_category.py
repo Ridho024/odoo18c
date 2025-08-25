@@ -29,4 +29,4 @@ class ProductCategory(models.Model):
             if not auto_enabled:
                 category.property_valuation = 'manual_periodic'
             else:
-                category.property_valuation = 'automatic'
+                return
